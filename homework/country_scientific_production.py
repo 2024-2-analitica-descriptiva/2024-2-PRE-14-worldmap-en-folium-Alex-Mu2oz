@@ -1,3 +1,5 @@
+"""Taller Presencial Evaluable"""
+
 import os
 
 import folium  # type: ignore
@@ -45,6 +47,7 @@ def add_countries_column(affiliations):
 
     return affiliations
 
+
 def clean_countries(affiliations):
 
     affiliations = affiliations.copy()
@@ -61,7 +64,6 @@ def count_country_frequency(affiliations):
     countries = countries.str.split(", ")
     countries = countries.explode()
     countries = countries.value_counts()
-    # print(countries)
     return countries
 
 
@@ -88,7 +90,6 @@ def plot_world_map(countries):
     m.save("files/map.html")
 
 
-
 def make_worldmap():
     """Función principal"""
 
@@ -104,5 +105,11 @@ def make_worldmap():
     plot_world_map(countries)
 
 
+
 if __name__ == "__main__":
     make_worldmap()
+    
+    
+    
+    
+    
